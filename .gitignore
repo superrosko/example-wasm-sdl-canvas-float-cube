@@ -1,0 +1,10 @@
+# Logs
+logs
+*.log
+
+# IDE
+.idea
+
+# Files
+build
+public/*.wasm.*

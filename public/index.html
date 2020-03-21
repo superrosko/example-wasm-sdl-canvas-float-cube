@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebAssembly Float cube!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .row {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        canvas {
+            cursor: crosshair !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <canvas id="canvas"></canvas>
+    </div>
+    <script src="float_cube.wasm.js"></script>
+    <script>
+        Module['onRuntimeInitialized'] = onRuntimeInitialized;
+        function onRuntimeInitialized() {
+            console.log(Module);
+            Module['canvas'] = (function() { return document.getElementById('canvas'); })();
+            var canvas = document.getElementById('canvas');
+            
+            canvas.addEventListener("mousemove", function (evt) {
+                var rect = this.getBoundingClientRect();
+                var x = evt.clientX - rect.left;
+                var y = evt.clientY - rect.top;
+                _setCubePoint(x, y);
+            }, false);
+        }
+    </script>
+</body>
+</html>
