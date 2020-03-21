@@ -112,10 +112,10 @@ int main()
     SDL_Init(SDL_INIT_VIDEO);
 
     setFieldSize(400, 400);
-    setFieldColor(255, 255, 0, 255);
+    setFieldColor(19, 38, 81, 255);
 
     setCubeSize(50, 50);
-    setCubeColor(0, 0, 255, 255);
+    setCubeColor(196, 85, 0, 255);
     setCubePoint(175, 175);
 
     renderWindow();
