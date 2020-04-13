@@ -24,7 +24,7 @@
     <script>
         Module['onRuntimeInitialized'] = onRuntimeInitialized;
         function onRuntimeInitialized() {
-            console.log(Module);
+            
             Module['canvas'] = (function() { return document.getElementById('canvas'); })();
             var canvas = document.getElementById('canvas');
             
@@ -32,7 +32,7 @@
                 var rect = this.getBoundingClientRect();
                 var x = evt.clientX - rect.left;
                 var y = evt.clientY - rect.top;
-                _setCubePoint(x, y);
+                _setCubePosition(x, y);
             }, false);
         }
     </script>
