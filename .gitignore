@@ -4,6 +4,8 @@ logs
 
 # IDE
 .idea
+.vscode
+*.code-workspace
 
 # Files
 build
