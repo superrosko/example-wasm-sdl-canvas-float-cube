@@ -7,7 +7,7 @@
 
 ## Introduction
 
-A simple example of using Emscripten for compile C++ to WASM with canvas animation
+A simple example of using Emscripten for compile C++ to WASM with canvas animation.
 
 Read more: https://rdevelab.ru/blog/web-assembly/post/example-wasm-sdl-canvas-float-cube.
 
